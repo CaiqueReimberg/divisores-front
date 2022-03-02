@@ -9,19 +9,18 @@ import { CalculatorManagerService } from './services/calculator-manager.service'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'divisores-front';
-  primes = [1, 2];
-  numberSelected: any;
-
-  divisors = [1, 2, 5, 6];
+  public numberSelected: any;
+  public primes: number[] = [];
+  public divisors: number[] = [];
 
   constructor(private calculatorService: CalculatorManagerService) {}
 
   public async calculate(): Promise<void> {
     if (!this.numberSelected || this.numberSelected < 1) {
       Swal.fire('Necessário digitar um número que seja positivo e maior que zero!');
+
+      return;
     }
-    console.log(this.numberSelected);
 
     this.calculatorService.getDivisors(this.numberSelected).subscribe((divisorsAndPrimes: Divisors) => {
       console.log(divisorsAndPrimes);

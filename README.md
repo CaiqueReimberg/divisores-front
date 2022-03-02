@@ -24,3 +24,20 @@ Para executar o projeto é necessário executar os seguintes comandos:
 * `npm install`;
 * `npm run start` (Caso rode ng serve, algumas flags necessárias não serão executadas).
 
+## Telas
+<br>
+
+### Tela principal
+<img src="src/assets/main_image.png">
+
+<br>
+
+### Tela de erro de input
+<img src="src/assets/number_error.png">
+
+<br>
+
+### Tela de erro de server ou client
+<img src="src/assets/server_or_client_error.png">
+
+<br>

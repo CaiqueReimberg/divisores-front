@@ -33,7 +33,7 @@ export class CalculatorManagerService {
       errorMessage = error.error.message;
     } else {
       // Erro ocorreu no lado do servidor
-      errorMessage = `Código: ${error.status}, ` + `mensagem: ${error.message}`;
+      errorMessage = error.message;
     }
 
     console.error(errorMessage);
